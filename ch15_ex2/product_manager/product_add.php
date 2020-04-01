@@ -17,14 +17,20 @@
 
         <label>Code:</label>
         <input type="input" name="code">
+        <?php value="echo htmlspecialchars($code);?">
+        echo $fields->getField('code')getHTML();?>
         <br>
 
         <label>Name:</label>
         <input type="input" name="name">
+       <?php value="echo htmlspecialchars($name);?">
+        echo $fields->getField('name')getHTML();?>
         <br>
 
         <label>List Price:</label>
         <input type="input" name="price">
+        <?php value="echo htmlspecialchars($price);?">
+        echo $fields->getField('price')getHTML();?>
         <br>
 
         <label>&nbsp;</label>
@@ -34,4 +40,4 @@
     <p><a href="index.php?action=list_products">View Product List</a></p>
 
 </main>
-<?php include '../view/footer.php'; ?>
+ <?php include '../view/footer.php'; ?>

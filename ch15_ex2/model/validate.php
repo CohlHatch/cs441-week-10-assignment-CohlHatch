@@ -58,6 +58,18 @@ class Validate {
         }
     }
 
+    public function number($name, $value, $required=true){
+        $field=$this->$fields->getField($name);
+        $this->text($name, $value, $required);
+        if($field->hasError()){return;}
+
+        if(!is_numeric($value)) {
+            $field-> setErrorMessage('Please enter a valid number');
+        } else {
+            $field->clearErrorMessage();
+        }
+    }
+
     public function phone($name, $value, $required = false) {
         $field = $this->fields->getField($name);
 
