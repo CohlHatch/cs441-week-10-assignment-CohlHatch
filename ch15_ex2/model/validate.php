@@ -11,8 +11,7 @@ class Validate {
     }
 
     // Validate a generic text field
-    public function text($name, $value,
-            $required = true, $min = 1, $max = 255) {
+    public function number($name, $value, $required = true, $min = 1, $max = 255) {
 
         // Get Field object
         $field = $this->fields->getField($name);
